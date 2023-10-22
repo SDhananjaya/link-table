@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Click Image to Open Table</title>
+  <style>
+    table {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <img src="https://www.shutterstock.com/image-vector/camera-photo-lens-3d-realistic-260nw-1389037175.jpg" alt="Click me" id="clickableImage">
+  <table id="myTable" border="1px">
+    <tr>
+      <th>S.no</th>
+      <th>Name</th>
+      <th>Id</th>
+    </tr>
+    <tr>
+      <td>01</td>
+      <td>Dhananjaya</td>
+      <td>55326</td>
+    </tr>
+    <tr>
+        <td>02</td>
+        <td>patel</td>
+        <td>55386</td>
+      </tr>
+    
+  </table>
+
+  <script>
+    document.getElementById("clickableImage").addEventListener("click", function() {
+      var table = document.getElementById("myTable");
+      if (table.style.display === "none") {
+        table.style.display = "table";
+      } else {
+        table.style.display = "none"; 
+      }
+    });
+  </script>
+</body>
+</html>
